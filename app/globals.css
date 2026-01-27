@@ -148,3 +148,93 @@ body > * {
   color: #48b4a5;
   text-decoration: underline;
 }
+
+/* Modern 3D Navigation */
+.nav-3d {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 249, 247, 0.92) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(72, 180, 165, 0.15);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.04),
+    0 2px 8px rgba(0, 0, 0, 0.02),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.8);
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-3d.scrolled {
+  box-shadow: 
+    0 12px 48px rgba(0, 0, 0, 0.08),
+    0 4px 12px rgba(0, 0, 0, 0.04),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Nav Pill Buttons */
+.nav-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4a5568;
+  border-radius: 9999px;
+  background: transparent;
+  border: 1.5px solid transparent;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+.nav-pill:hover {
+  color: #48b4a5;
+  background: rgba(72, 180, 165, 0.08);
+  border-color: rgba(72, 180, 165, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 24px rgba(72, 180, 165, 0.15),
+    0 2px 8px rgba(72, 180, 165, 0.1);
+}
+
+.nav-pill:active,
+.nav-pill[aria-current="page"] {
+  color: #ffffff;
+  background: linear-gradient(135deg, #48b4a5 0%, #3a8f7f 100%);
+  border-color: #48b4a5;
+  box-shadow: 
+    0 12px 32px rgba(72, 180, 165, 0.25),
+    0 4px 12px rgba(72, 180, 165, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  transform: translateY(0);
+}
+
+.nav-pill:focus-visible {
+  outline: 2px solid #48b4a5;
+  outline-offset: 3px;
+}
+
+/* Mobile Nav Pills */
+.nav-pill-mobile {
+  display: block;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #4a5568;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1.5px solid rgba(72, 180, 165, 0.15);
+  transition: all 200ms ease;
+}
+
+.nav-pill-mobile:hover {
+  color: #48b4a5;
+  background: rgba(72, 180, 165, 0.1);
+  border-color: rgba(72, 180, 165, 0.3);
+  transform: translateX(4px);
+}
+
+.nav-pill-mobile:active {
+  background: linear-gradient(135deg, #48b4a5 0%, #3a8f7f 100%);
+  color: #ffffff;
+  border-color: #48b4a5;
+}
